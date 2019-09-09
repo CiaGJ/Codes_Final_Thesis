@@ -142,16 +142,8 @@ fprintf('\n');
 %       [Signal,PowerW,PowerdBm]=Pirometer5('Off','On','InGaAs',1430,800,62.5,0.3,4,0.5,650,1)
 
 
-%%
-%**************************************************************************
-%   PROGRAM
-%**************************************************************************
 
-%%
-%**************************************************************************
-%   PROGRAM SETTINGS AND UNIT CONVERSIONS
-%**************************************************************************
-
+%%   PROGRAM SETTINGS AND UNIT CONVERSIONS
 %FORMAT NUMBER
 format shortEng
 
@@ -165,44 +157,21 @@ LambdaUpper=LambdaUpper*1e-9;               %Convert: nm    ->  m
 Length=Length*1e-3;                         %Convert: m     ->  km
 Dob=Dob*1e-6;                               %Convert: um    ->  m
 
-%%
-%**************************************************************************
-%   ACEPTANCE ANGLE & SOLID ANGLE FOR OT = ONA and rT > rNA
-%**************************************************************************
-
+%%   ACEPTANCE ANGLE & SOLID ANGLE FOR OT = ONA and rT > rNA
 [SolidAngleArea,SpotDiameter,AceptanceAngle]=FunctionAcceptanceAngle(Mean,LambdaUpper,LambdaLower,Diameter,Distance,Dob);
 
-
-%%
-%**************************************************************************
-%   RESPONSIVITY
-%**************************************************************************
-
+%%   RESPONSIVITY
 %RESPONSIVITY OF THE PHOTODETECTOR'S MATERIAL.
 [Responsivity,CouplingEfficience]=FunctionResponsivity(PdMaterial,Diameter,DistanceConnector,AceptanceAngle);
 
-%%
-%**************************************************************************
-%   INSERTION LOSSES
-%**************************************************************************
-
+%%   INSERTION LOSSES
 % Insertion Losses. FC Adaptor, WDM Filter and Silica Fiber.
 [SystemLosses,~]=FunctionLosses(Losses,PdMaterial,LambdaUpper,LambdaLower,Length);
 
-
-%%
-%***********************************************************************************
-%   PLANCK FUNCTION
-%***********************************************************************************
-
+%%   PLANCK FUNCTION
 [Signal,Power]=FunctionPlanck(Responsivity,Emissivity,Temperature,SolidAngleArea,LambdaLower,LambdaUpper,PdMaterial);
 
-
-%%
-%**************************************************************************
-%   COMPUTING LOSSES IN PLANCK FUNCTION
-%**************************************************************************
-
+%%   COMPUTING LOSSES IN PLANCK FUNCTION
 [Signal,PowerW,PowerdBm]=FunctionPlanckLosses(Power,Signal,SystemLosses,CouplingEfficience,PdMaterial,Mean);
 
 

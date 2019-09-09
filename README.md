@@ -1,20 +1,21 @@
-## C梔igos Simulaciones MATLAB
+# C贸digos Simulaciones MATLAB
 
-Este repositorio contiene todos los c梔igos desarrollados en MATLAB utilizados para realizar las simulaciones necesarias para el desarrollo de mi Trabajo de Fin de Grado. 
+Este repositorio contiene todos los c贸digos desarrollados en MATLAB utilizados para realizar las simulaciones necesarias para el desarrollo de mi Trabajo de Fin de Grado. 
 
-# Estructura Repositorio
+## Estructura Repositorio
  
 Este repositorio tiene la siguiente estructura:
-	- **Piromenter6**: c梔igo desarrollado por Alberto Tapetado para la realizaci梟 de su tesis doctoral y en el que se basan el resto de c梔igos desarrollados.
 
-	- **Pirometer7**: c梔igo para la simulaci梟 del funcionamiento de un pir梞etro dos colores en programaci梟 modular. Se incluyen algunas funciones utilizadas para simular algunas casu抯ticas.
+- **Piromenter6**: c贸digo desarrollado por Alberto Tapetado para la realizaci贸n de su tesis doctoral y en el que se basan el resto de c贸digos desarrollados.
+
+- **Pirometer7**: c贸digo para la simulaci贸n del funcionamiento de un pir贸metro dos colores en programaci贸n modular. Se incluyen algunas funciones utilizadas para simular algunas casu铆sticas.
 	
-	- **PirometerDob_Old**: modificaci梟 de los c梔igos de Pirometer7 para adaptarlos al caso en el que la medida realizada depende del tama杘 del objeto a medir. Se desarrollaron los c梔igos a partir de las funciones dadas por Alberto Tapetado. Se incluyen algunas funciones utilizadas para simular algunas casu抯ticas.
+- **PirometerDob_Old**: modificaci贸n de los c贸digos de Pirometer7 para adaptarlos al caso en el que la medida realizada depende del tama帽o del objeto a medir. Se desarrollaron los c贸digos a partir de las funciones dadas por Alberto Tapetado. Se incluyen algunas funciones utilizadas para simular algunas casu贸sticas.
 
-	- **PirometerDob_New**: modificaci梟 de los c梔igos de Pirometer7 para adaptarlos al caso en el que la medida realizada depende del tama杘 del objeto a medir. Se desarrollaron los c梔igos a partir de las funciones enunciadas en mi trabajo de fin de grado. Se incluyen algunas funciones utilizadas para simular algunas casu抯ticas. 
+- **PirometerDob_New**: modificaci贸n de los c贸digos de Pirometer7 para adaptarlos al caso en el que la medida realizada depende del tama贸o del objeto a medir. Se desarrollaron los c贸digos a partir de las funciones enunciadas en mi trabajo de fin de grado. Se incluyen algunas funciones utilizadas para simular algunas casu贸sticas. 
 	
-	- **Tolerancias**: modificaci梟 de los c梔igos de PirometerDob_New para realiazar un estudio de tolerancias del sistema. En este caso, solo se ha realizado el estudio para la configuraci梟 detallada en la tesis de Alberto Tapetado y la configuraci梟 inicial de mi trabajo de fin de grado.
+- **Tolerancias**: modificaci贸n de los c贸digos de PirometerDob_New para realiazar un estudio de tolerancias del sistema. En este caso, solo se ha realizado el estudio para la configuraci贸n detallada en la tesis de Alberto Tapetado y la configuraci贸n inicial de mi trabajo de fin de grado.
 
-	- **Otras_funciones**: funciones desarrolladas para facilitar las simulaciones desarrolladas.
+- **Otras_funciones**: funciones desarrolladas para facilitar las simulaciones desarrolladas.
 
-En todas las carpetas se incluye un README.md y dos carpetas denominadas *Data* y *Data_Test*, a excepci梟 de la carpeta *Pirometer6* y *Otras_funciones* (en esta 渓tima solo se incluye un README.md). En *Data* se encuentran los .mat necesarios para el correcto funcionamiento de cada uno de los c梔igos desarrollados, es igual en todas las carpetas. En *Data_Test* se encuentran los .mat b噑sicos utilizados para realizar las pruebas.
+En todas las carpetas se incluye un README.md y dos carpetas denominadas *Data* y *Data_Test*, a excepci贸n de la carpeta *Pirometer6* y *Otras_funciones* (en esta 贸ltima solo se incluye un README.md). En *Data* se encuentran los .mat necesarios para el correcto funcionamiento de cada uno de los c贸digos desarrollados, es igual en todas las carpetas. En *Data_Test* se encuentran los .mat b贸ssicos utilizados para realizar las pruebas.
