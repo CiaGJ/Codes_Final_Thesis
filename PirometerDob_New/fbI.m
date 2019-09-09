@@ -2,10 +2,6 @@ function [T2,T3]=fbI(rf,t,rmax,Limit)
 % Caso I.2
 
 % Término 1
-% Este termino esta mal, la u no tiene limites constantes, dependen de r,
-% por lo tanto no se puede calcular así, ademas de otras cosas
-
-% fun=@(r)(r.*(2.*pi.^2.*(rf-r).^2)./(t.^2+(rf-r).^2));  
 xmax=Limit;
 
 U=0;
@@ -23,8 +19,6 @@ R=U*r+R;
 end
 
 T2=4*pi^2*R*dr;
-
-% Hasta aquí se corrigió
 
 % Término 2
 

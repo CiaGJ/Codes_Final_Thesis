@@ -8,7 +8,7 @@ dr=(0.2)^0.5*1e-7;
 for r=rf:dr:Limit
 
 fun=@(u)((acos((r^2-rf^2+u.^2)./(2.*u*r))).*(t^2.*u./(t^2+u.^2).^2));
-U=integral(@(u)fun(u),r-rf,rmax); %He cambiado el orden del limite inferior pq me salía negativo
+U=integral(@(u)fun(u),r-rf,rmax); 
 
 
 

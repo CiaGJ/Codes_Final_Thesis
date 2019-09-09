@@ -1,5 +1,5 @@
 function [D1]=d_dr_core(Diameter,Distance,NA)
-% Calcula la derivada parcial con respecto al radio de la fibra del ï¿½ngulo sï¿½lido.
+% Calcula la derivada parcial con respecto al radio de la fibra del ángulo solido.
 fprintf('d_dr_core\n');
 %dr=(0.2)^0.5*1e-7;
 rf=Diameter/2;

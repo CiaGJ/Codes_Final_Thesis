@@ -1,5 +1,5 @@
 function [D3]=d_dNA(Diameter,Distance,NA)
-% Esta función cálcula la derivada parcial del ángulo sólido con respecto a
+% Esta funcion calcula la derivada parcial del angulo solido con respecto a
 % la apertura numérica de la fibra.
 fprintf('d_dNA\n');
 

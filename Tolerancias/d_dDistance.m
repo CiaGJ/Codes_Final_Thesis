@@ -1,5 +1,5 @@
 function [D2]=d_dDistance(Diameter,Distance,NA)
-% Esta función cálcula la derivada parcial del ángulo sólido con respecto a
+% Esta funcion calcula la derivada parcial del angulo solido con respecto a
 % la distancia de la fibra con respecto a la superficie a medir.
 fprintf('d_dDistance\n');
 
