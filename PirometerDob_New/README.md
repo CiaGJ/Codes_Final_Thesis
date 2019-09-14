@@ -1,5 +1,5 @@
 # PirometerDob.m
-    [Signal,PowerW,PowerdBm]=PirometerDob(Mean,Losses,PdMaterial,LambdaUpper,LambdaLower,Diameter,Distance,DistanceConnector,Length,Temperature,Emissivity)
+    [Signal,PowerW,PowerdBm]=PirometerDob(Mean,Losses,PdMaterial,LambdaUpper,LambdaLower,Diameter,Distance,DistanceConnector,Length,Temperature,Emissivity,Dob)
 
 ## Parámetros de entrada
 Los párametros de entrada de esta función son los siguientes:
@@ -92,8 +92,32 @@ Los índices de Sellmeier utilizados se encuentran en la carpeta _Data_.
 ### FunctionSpotDiameter
 	[SolidAngleArea]=FunctionSpotDiameter(Dob,SpotDiameter,Distance,AceptanceAngle,Diameter)
 
-Esta función se encuentra integrada en la función _“FunctionAcceptanceAngle”_. Se utiliza para calcular el ángulo sólido dependiendo de si el diámetro del objeto a medir es menor que el diámetro del cono de aceptancia. En caso de que se mayor, da igual el tamaño del objeto a medir se calcula siempre de la misma manera. 
+Esta función se encuentra integrada en la función _“FunctionAcceptanceAngle”_. Se utiliza para calcular el ángulo sólido dependiendo de si el diámetro del objeto a medir es menor que el diámetro del cono de aceptancia. Esta función recurre a las funciones _"casoI"_, _"casoII"_ y _"casoIII"_.
 
+### casoI
+    [T1,T2,T3,T4]=casoI(t,rf,rob,rmax)
+
+Esta función se utiliza cuando el caso que estamos analizando se corresponde con el primer caso de estudio declarado en mi TFG. Además, recurre a las funciones _"fa"_, _"fbI"_ y _"fcI"_ y cuyos encabezados son los siguientes:
+    [T1]=fa(t,rmax,Limit)
+    [T2,T3]=fbI(rf,t,rmax,Limit)
+    [T4]=fcI(t,rf,rmax,Limit)    
+
+### casoII
+    [T1,T2,T3,T4,T5]=casoII(t,rf,rob,rmax)
+
+Esta función se utiliza cuando el caso que estamos analizando se corresponde con el segundo caso de estudio declarado en mi TFG. Además, recurre a las funciones _"faII"_, _"fbII"_ y _"fcII"_ y cuyos encabezados son los siguientes:
+    [T1,T2]=faII(rf,t,Limit)
+    [T3,T4]=fbII(rf,t,rmax,Limit)
+    [T5]=fcII(t,rf,rmax,Limit)  
+    
+### casoIII
+    [T1,T2,T3,T4]=casoIII(t,NA,rf,rob,ran)
+
+Esta función se utiliza cuando el caso que estamos analizando se corresponde con el tercer caso de estudio declarado en mi TFG. Además, recurre a las funciones _"f3"_, _"f2"_ y _"f1"_ y cuyos encabezados son los siguientes:
+    [T1,T2]=f3(rf,t,Limit)
+    [T3]=f2(t,rf,Limit)
+    [T4]=f1(rf,t,NA,Limit)
+    
 ### FunctionResponsivity
 
     [Responsivity,CouplingEfficience]=FunctionResponsivity(PdMaterial,Diameter,DistanceConnector,AceptanceAngle)
